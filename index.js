@@ -1,6 +1,4 @@
 const express = require("express");
-const db = require("./config/db");
-const cors = require("cors");
 const axios = require("axios");
 const Redis = require("redis");
 
@@ -10,7 +8,6 @@ const DEFAULT_EXPIRATION = 3600;
 
 const app = express();
 const PORT = 3000;
-// app.use(cors(express.urlencoded({ extended: true })));
 app.use(express.json());
 
 app.get("/photos", async (req, res) => {
